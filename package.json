@@ -1,0 +1,20 @@
+{
+  "name": "bastiengallo_3_11012022",
+  "version": "1.0.0",
+  "description": "OC_P3_Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basthub/BastienGallo_3_11012022.git"
+  },
+  "author": "Bastien Gallo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basthub/BastienGallo_3_11012022/issues"
+  },
+  "homepage": "https://github.com/basthub/BastienGallo_3_11012022#readme"
+}
