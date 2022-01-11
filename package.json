@@ -13,6 +13,7 @@
   },
   "author": "Bastien Gallo",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/basthub/BastienGallo_3_11012022/issues"
   },
