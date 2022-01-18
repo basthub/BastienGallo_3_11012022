@@ -1,29 +1,51 @@
-* {
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
   list-style: none;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   box-sizing: border-box;
+  background: #fff;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
 }
 
 h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 3rem;
 }
 
 .logo {
   font-family: "Shrikhand", cursive;
 }
 
+i {
+  font-size: 2rem;
+}
+
 .btn {
-  background: #9356DC;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   color: #fff;
-  border-radius: 20px;
-  width: auto;
-  height: auto;
+  border-radius: 4rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(175deg, #99e2d0, #32b091);
 }
 
 header {
@@ -64,30 +86,96 @@ footer {
   color: #fff;
 }
 
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  background-color: #eaeaea;
+}
+.location i {
+  margin-right: 1rem;
+}
+.location p {
+  margin: 1.5rem 0 1.5rem 0;
+}
+
 .heading {
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
-.heading__location {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: 400;
-}
-.heading h2 {
+.heading__title {
   font-weight: 700;
+  width: 80%;
+  text-align: center;
+  margin-top: 6rem;
 }
-.heading p {
+.heading__subtitle {
+  margin-top: 1.5rem;
   font-weight: 100;
+  text-align: center;
+  width: 80%;
 }
 .heading__btn {
-  background: #9356DC;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   color: #fff;
-  border-radius: 20px;
-  width: auto;
-  height: auto;
+  border-radius: 4rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+  margin: 1.5rem 0 6rem 0;
+}
+.heading__btn:hover {
+  background: linear-gradient(175deg, #99e2d0, #32b091);
+}
+
+.functioning {
+  margin: 6rem 0 6rem 1.5rem;
+  width: 92%;
+}
+.functioning ul {
+  margin-left: 0.8rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f6f6;
+  font-weight: 400;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin: 1.5rem 0 1.5rem 0;
+  box-shadow: 0 1rem 1rem #e7e7e7;
+}
+.step i {
+  color: #7e7e7e;
+}
+.step__number {
+  background: #9356DC;
+  border-radius: 4rem;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  position: relative;
+  right: 4.5rem;
+}
+.step__txt {
+  margin: 0 1.5rem 0 1.5rem;
+  width: 30rem;
+}
+.step--active {
+  background: #f5edff;
+}
+.step--active i {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,79 @@
+.location{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    background-color: $colour-location;
+    & i{
+        margin-right:1rem; 
+    }
+    & p{
+        margin: $grid-gutter 0 $grid-gutter 0;
+    }
+}
+.heading{
+    background: $colour-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__title{
+        font-weight: 700;
+        width: 80%;
+        text-align: center;
+        margin-top: $layout-margin;
+    }
+    &__subtitle{
+        margin-top: $grid-gutter;
+        font-weight: 100;
+        text-align: center;
+        width:80%;
+    }
+    &__btn{
+        @include btn;
+        margin: $grid-gutter 0 $layout-margin 0;
+    }
+}
+.functioning{
+    margin:  $layout-margin 0 $layout-margin $grid-gutter;
+    width: 92%;
+    & ul{
+        margin-left: 0.8rem;
+    }
+}
+.step{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: $colour-background;
+    font-weight: 400;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: $grid-gutter 0 $grid-gutter 0;
+    @include shadow;
+    & i{
+        color: $colour-icon;
+    }
+    &__number{
+        background: $colour-primary;
+        border-radius: 4rem;
+        color:$colour-white;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        position: relative;
+        right: 4.5rem;
+    }
+    &__txt{
+        margin: 0 $grid-gutter 0 $grid-gutter;
+        width: 30rem;
+    }
+    &--active{
+        background:$colour-lightprimary;
+        & i{
+            color:$colour-primary;
+        }
+    }
+}

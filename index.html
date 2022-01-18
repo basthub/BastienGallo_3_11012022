@@ -17,27 +17,39 @@
         <h1>ohmyfood</h1>
     </header>
 
-    <section class="heading">
-        <div class="heading__location">
+    <section class="location">
             <i class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
-        </div>
-        <h2>Réserver le menu qui vous convient</h2>
-        <p class="heading__">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a href="#" class="heading__btn" >Explorer nos restaurants</a>
+    </section>
+    <section class="heading">
+        <h2 class="heading__title">Réserver le menu qui vous convient</h2>
+        <p class="heading__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+        <a class="heading__btn" href="#restaurant">Explorer nos restaurants</a>
     </section>
 
     <main class="container">
-        <aside class="fonctionnement">
+        <aside class="functioning">
             <h2>Fonctionnement</h2>
             <ul>
-                <li>1 <i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-                <li>2 <i class="fas fa-list"></i>Composez votre menu</li>
-                <li>3 <i class="fas fa-store"></i>Dégustez au restaurant</li>
+                <li class="step">
+                    <p class="step__number">1</p>
+                    <i class="fas fa-mobile-alt fa-fw"></i>
+                    <p class="step__txt">Choisissez un restaurant</p>
+                </li>
+                <li class="step">
+                    <p class="step__number">2</p> 
+                    <i class="fas fa-list fa-fw"></i>
+                    <p class="step__txt">Composez votre menu</p>
+                </li>
+                <li class="step step--active">
+                    <p class="step__number">3</p> 
+                    <i class="fas fa-store fa-fw"></i>
+                    <p class="step__txt">Dégustez au restaurant</p>
+                </li>
             </ul>
         </aside>
 
-        <section class="restaurant">
+        <section class="restaurant" id="restaurant">
             <h2>Restaurants</h2>
             <a href="la_palette_du_gout.html">
                 <div class="card">
