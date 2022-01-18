@@ -12,21 +12,6 @@
     
 }
 
-@mixin img-ratio {
-    width: 100%;
-        display: block;
-        overflow: hidden;
-        padding-top: 56.25%;
-        position: relative;
-        & img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            transform: translate(-50%, -50%);
-        }
-}
-
 @mixin shadow{
     box-shadow: 0 1rem 1rem #e7e7e7;
 }

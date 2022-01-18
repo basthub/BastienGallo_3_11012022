@@ -16,7 +16,7 @@
     <header>
         <h1>ohmyfood</h1>
     </header>
-
+    <main class="container">
     <section class="location">
             <i class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
@@ -26,8 +26,6 @@
         <p class="heading__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
         <a class="heading__btn" href="#restaurant">Explorer nos restaurants</a>
     </section>
-
-    <main class="container">
         <aside class="functioning">
             <h2>Fonctionnement</h2>
             <ul>
@@ -48,21 +46,20 @@
                 </li>
             </ul>
         </aside>
-
         <section class="restaurant" id="restaurant">
             <h2>Restaurants</h2>
             <a href="la_palette_du_gout.html">
-                <div class="card">
-                    <img src="public/img/la_palette_du_gout.jpg" alt="plat servi au restaurant La palette du goût" class="card__img">
+                <div class="restaurant-prev">
+                    <img src="public/img/la_palette_du_gout.jpg" alt="plat servi au restaurant La palette du goût" class="restaurant-prev__img">
                     <p>nouveau</p>
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
                 </div>
             </a>
             <a href="la_note_enchantee.html">
-                <div class="card">
-                    <img src="public/img/la_note_enchantee.jpg" alt="plat servi au restaurant La note enchantée" class="card__img">
+                <div class="restaurant-prev">
+                    <img src="public/img/la_note_enchantee.jpg" alt="plat servi au restaurant La note enchantée" class="restaurant-prev__img">
                     <p>nouveau</p>
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
@@ -70,27 +67,29 @@
                 </div>
             </a>
             <a href="a_la_francaise.html">
-                <div class="card">
-                    <img src="public/img/a_la_francaise.jpg" alt="plat servi au restaurant À la française" class="card__img">
+                <div class="restaurant-prev">
+                    <img src="public/img/a_la_francaise.jpg" alt="plat servi au restaurant À la française" class="restaurant-prev__img">
                     <h3>À la française</h3>
                     <p>Cité Rouge</p>
-                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
                 </div>
             </a>
-                <div class="card">
-                    <img src="public/img/le_delice_des_sens.jpg" alt="plat servi au restaurant Le délice des sens" class="card__img">
+            <a href="le_delice_des_sens.html">
+                <div class="restaurant-prev">
+                    <img src="public/img/le_delice_des_sens.jpg" alt="plat servi au restaurant Le délice des sens" class="restaurant-prev__img">
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
-                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
                 </div>
+            </a>
         </section>
     <footer>
         <h2 class=footer__logo>ohmyfood</h2>
         <ul>
-            <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+            <li><a href="#"><i class="fas fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
-            <li>Contact</li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </footer>
     

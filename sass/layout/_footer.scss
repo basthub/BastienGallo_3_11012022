@@ -1,4 +1,18 @@
 footer{
     background: $colour-footer;
     color: $colour-white;
+    padding:0 0 $grid-gutter 1rem;
+    & > h2{
+        margin-bottom: $grid-gutter;
+        padding-top: $grid-gutter;
+    }
+    & i{
+        margin-right: 1rem;
+    }
+    & a{
+        color: $colour-white;
+        &:hover{
+            color:$colour-tertiary;
+        }
+    }
 }
