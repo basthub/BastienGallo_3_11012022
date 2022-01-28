@@ -55,7 +55,8 @@ i {
   cursor: pointer;
 }
 .btn:hover {
-  background: linear-gradient(175deg, #99e2d0, #32b091);
+  background: linear-gradient(175deg, #ff93e1, #a16be0);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.16) inset, 0px 0px 5px 0px #8641d8;
 }
 
 header {
@@ -130,7 +131,8 @@ footer a:hover {
   margin: 1.5rem 0 6rem 0;
 }
 .heading__btn:hover {
-  background: linear-gradient(175deg, #99e2d0, #32b091);
+  background: linear-gradient(175deg, #ff93e1, #a16be0);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.16) inset, 0px 0px 5px 0px #8641d8;
 }
 
 .functioning {
@@ -179,35 +181,84 @@ footer a:hover {
 
 .restaurant {
   background: #f6f6f6;
+  padding: 6rem 0 6rem 0;
+}
+.restaurant > h2 {
+  margin: 0 0 1.5rem 1.5rem;
+}
+
+.restaurant-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 6rem 0 6rem 0;
 }
-.restaurant > a {
-  width: 90%;
+.restaurant-wrapper > a {
+  width: 93%;
   background: transparent;
   margin-bottom: 1.5rem;
   border-radius: 4rem;
 }
 
 .restaurant-prev {
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  /*background: url("../img/la_palette_du_gout.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;*/
   width: 100%;
+  position: relative;
+  min-width: 30rem;
+  min-height: 35rem;
+  border-radius: 2rem 2rem 3rem 3rem;
+  box-shadow: 0 1rem 1rem #e7e7e7;
+  /*    &__img{
+          border-radius: 2rem
+      }*/
+  /*
   border-radius: 2rem;
   height: 35rem;
-  box-shadow: 0 1rem 1rem #e7e7e7;
+
+  @include shadow;*/
 }
-.restaurant-prev__img {
-  border-radius: 20px 20px 0 0;
+.restaurant-prev:hover {
+  background: #f5edff;
+}
+.restaurant-prev__status {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+.restaurant-prev__status span {
+  margin-right: 30px;
+  color: #2c9c81;
+  background-color: #99e2d0;
+  font-weight: 700;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.5rem;
+}
+.restaurant-prev img {
   object-fit: cover;
   min-height: 0;
+  width: 100%;
+  border-radius: 2rem 2em 0 0;
+  height: 27rem;
+}
+.restaurant-prev__info {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 2rem 2rem;
+}
+.restaurant-prev__info i {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

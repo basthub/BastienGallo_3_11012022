@@ -79,33 +79,85 @@
 }
 .restaurant{
     background: $colour-background;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    width: 100%;
     padding: $layout-margin 0 $layout-margin 0;
-    & > a{
-        width: 90%;
-        background: transparent;
-        margin-bottom: $grid-gutter;
-        border-radius: 4rem;
-    }
-}
 
+    & > h2{
+        margin: 0 0 $grid-gutter $grid-gutter;
+    }
+    
+    
+}
+.restaurant-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        width: 100%;  
+        & > a{
+            width: 93%;
+            background: transparent;
+            margin-bottom: $grid-gutter;
+            border-radius: 4rem;
+        }
+}
 .restaurant-prev{
-    background: $colour-white;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    /*background: url("../img/la_palette_du_gout.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
     width: 100%;
-    border-radius: 2rem;
-    height: 35rem;
-    &__img{
-        border-radius: 20px 20px 0 0;
+    position: relative;
+    min-width: 30rem;
+    min-height: 35rem;
+    border-radius: 2rem 2rem 3rem 3rem;
+    @include shadow;
+    &:hover{
+        background:$colour-lightprimary;
+    }
+    &__status{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 15px;
+        
+        & span {
+            margin-right: 30px;
+            color: darken($colour-tertiary, 35%);
+            background-color: $colour-tertiary;
+            font-weight: 700;
+            padding: 1rem 2rem 1rem 2rem;
+            border-radius: 0.5rem;   
+        }
+    }
+/*    &__img{
+        border-radius: 2rem
+    }*/
+    & img{
         object-fit: cover;
         min-height: 0;
+        width: 100%;
+        border-radius: 2rem 2em 0 0;
+        height:27rem;
     }
-    @include shadow;
+    &__info{
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 0 0 2rem 2rem;
+        & i{
+            margin-right: 10px;
+        }
+        
+    } /*
+    border-radius: 2rem;
+    height: 35rem;
+
+    @include shadow;*/
+
 }

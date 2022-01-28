@@ -7,7 +7,8 @@
     font-weight: 400;
     cursor: pointer;
     &:hover{
-        background: linear-gradient(175deg, $colour-tertiary, darken($colour-tertiary, 30%));
+        background: linear-gradient(175deg, lighten($colour-secondary, 5%), lighten($colour-primary, 5%));
+        box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.16) inset, 0px 0px 5px 0px darken($colour-primary,5%);
     }
     
 }
@@ -15,3 +16,4 @@
 @mixin shadow{
     box-shadow: 0 1rem 1rem #e7e7e7;
 }
+
