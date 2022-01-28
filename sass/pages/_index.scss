@@ -33,6 +33,7 @@
     &__btn{
         @include btn;
         margin: $grid-gutter 0 $layout-margin 0;
+        
     }
 }
 .functioning{

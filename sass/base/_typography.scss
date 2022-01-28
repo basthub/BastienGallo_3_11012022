@@ -6,7 +6,7 @@ body{
 
 h1{
     font-family: 'Shrikhand', cursive;
-    font-size: 3rem;
+    font-size: 4rem;
 }    
 
 .logo{
@@ -15,7 +15,20 @@ h1{
 i{
     font-size: 2rem;
 }
+.menu-title{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2.5rem;
+}
 .footer__logo{
     font-family: 'Shrikhand', cursive;
     font-size: 2rem;        
+}
+
+.menu-section{
+    &__title{
+        font-weight: 400;
+    }
+    &__card__sub > span{
+    font-weight: 700;
+    }
 }
