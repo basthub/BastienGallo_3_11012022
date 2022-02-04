@@ -55,6 +55,7 @@
     padding: 3rem;
     margin: $grid-gutter 0 $grid-gutter 0;
     @include shadow;
+    transition: transform .45s ease, background .45s ease;
     & i{
         color: $colour-icon;
     }
@@ -71,8 +72,9 @@
         margin: 0 $grid-gutter 0 $grid-gutter;
         width: 30rem;
     }
-    &--active{
+    &:hover{
         background:$colour-lightprimary;
+        transform: scale(1.05);
         & i{
             color:$colour-primary;
         }
@@ -120,7 +122,8 @@
         display: flex;
         justify-content: flex-end;
         padding-top: 15px;
-        
+        position: relative;
+        bottom: 27rem;       
         & span {
             margin-right: 30px;
             color: darken($colour-tertiary, 35%);
@@ -155,6 +158,9 @@
             margin-right: 10px;
         }
         
+    }
+    &__like{
+        @include like;
     } /*
     border-radius: 2rem;
     height: 35rem;

@@ -13,11 +13,14 @@ h1{
     font-family: 'Shrikhand', cursive;
 }
 i{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .menu-title{
     font-family: 'Shrikhand', cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    & i{
+        font-size: 2.5rem;
+    }
 }
 .footer__logo{
     font-family: 'Shrikhand', cursive;

@@ -28,36 +28,106 @@
     bottom: 4rem;
     padding: 2*$grid-gutter 2*$grid-gutter;
     background-color: $colour-background;
-    & i{
-        font-size: 3rem;
+    &__like{
+        @include like;
     }
 }
+.hide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: red;
+    border-radius: 0 4px 0 32px;
+  }
+  
+  .validate {
+    margin-top: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
 .menu-section{
     width: 90%;
- /*   &__title{
+    &__title{
+        &--underline{
+            background-color: $colour-tertiary;
+            width: 5rem;
+            height: 0.4rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
         
     }
-    &__wrapper{
+/*    &__wrapper{
 
     }*/
     &__card{
+        display: block;
         background-color: $colour-white;
         border-radius: 2rem;
         width: 100%;
         padding: $grid-gutter 0;
         margin: $grid-gutter 0;
+        position: relative;
+        top: 10rem;
         @include shadow;
+        @include fadein;
+        overflow: hidden;
+        
         & > h4{
             margin: 0 $grid-gutter 0.5*$grid-gutter $grid-gutter;
+        }
+        & > p{
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &__sub{
             margin: 0 2*$grid-gutter 0 $grid-gutter;
             display: flex;
             justify-content: space-between;
+            flex-wrap: nowrap;
         }
-
+        .hide {
+            background-color: #99e2d0;
+            height: 100%;
+            width: 9rem;
+            padding-right: 9px;
+            border-radius: 0;
+            margin-right: -10.5rem;
+            align-items: center;
+            transition: all 0.3s ease-out;
+        
+          }
+          
+          .validate {
+            transform: skew(-6deg);
+            margin-left: -2px;
+            margin-top: 9px;
+            opacity: 0;
+          }
+        &:hover {
+            .hide {
+                margin-right: -12px;
+            }
+            .validate {
+                opacity: 1;
+            }
+            .menu-section__card__sub{
+                & > span{
+                    margin-right: 9rem;
+                }
+            }
+        }  
+        
+        
     }
 }
+
 .command__btn{
     @include btn;
     margin: $layout-margin 0;

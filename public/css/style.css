@@ -37,11 +37,14 @@ h1 {
 }
 
 i {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .menu-title {
   font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+}
+.menu-title i {
   font-size: 2.5rem;
 }
 
@@ -129,34 +132,143 @@ footer a:hover {
   padding: 3rem 3rem;
   background-color: #f6f6f6;
 }
-.menu-title i {
-  font-size: 3rem;
+.menu-title__like {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.menu-title__like .far {
+  opacity: 1;
+}
+.menu-title__like .fas {
+  opacity: 0;
+  background: linear-gradient(30deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu-title__like .fas:hover {
+  transition: opacity 0.2s ease-in;
+  opacity: 1;
+  transform: scale(1.14);
+  cursor: pointer;
+}
+.menu-title__like > i {
+  position: absolute;
+}
+
+.hide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 0 4px 0 32px;
+}
+
+.validate {
+  margin-top: -4px;
+  color: white;
+  font-family: courier, sans;
 }
 
 .menu-section {
   width: 90%;
-  /*   &__title{
+  /*    &__wrapper{
 
-     }
-     &__wrapper{
-
-     }*/
+      }*/
+}
+.menu-section__title--underline {
+  background-color: #99e2d0;
+  width: 5rem;
+  height: 0.4rem;
+  display: block;
+  margin-top: 0.5rem;
 }
 .menu-section__card {
+  display: block;
   background-color: #fff;
   border-radius: 2rem;
   width: 100%;
   padding: 1.5rem 0;
   margin: 1.5rem 0;
+  position: relative;
+  top: 10rem;
   box-shadow: 0 1rem 1rem #e7e7e7;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both, fadein 2s;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both, fadein 2s;
+  overflow: hidden;
+}
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .menu-section__card > h4 {
   margin: 0 1.5rem 0.75rem 1.5rem;
+}
+.menu-section__card > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-section__card__sub {
   margin: 0 3rem 0 1.5rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.menu-section__card .hide {
+  background-color: #99e2d0;
+  height: 100%;
+  width: 9rem;
+  padding-right: 9px;
+  border-radius: 0;
+  margin-right: -10.5rem;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+.menu-section__card .validate {
+  transform: skew(-6deg);
+  margin-left: -2px;
+  margin-top: 9px;
+  opacity: 0;
+}
+.menu-section__card:hover .hide {
+  margin-right: -12px;
+}
+.menu-section__card:hover .validate {
+  opacity: 1;
+}
+.menu-section__card:hover .menu-section__card__sub > span {
+  margin-right: 9rem;
 }
 
 .command__btn {
@@ -244,6 +356,7 @@ footer a:hover {
   padding: 3rem;
   margin: 1.5rem 0 1.5rem 0;
   box-shadow: 0 1rem 1rem #e7e7e7;
+  transition: transform 0.45s ease, background 0.45s ease;
 }
 .step i {
   color: #7e7e7e;
@@ -261,10 +374,11 @@ footer a:hover {
   margin: 0 1.5rem 0 1.5rem;
   width: 30rem;
 }
-.step--active {
+.step:hover {
   background: #f5edff;
+  transform: scale(1.05);
 }
-.step--active i {
+.step:hover i {
   color: #9356DC;
 }
 
@@ -318,6 +432,8 @@ footer a:hover {
   display: flex;
   justify-content: flex-end;
   padding-top: 15px;
+  position: relative;
+  bottom: 27rem;
 }
 .restaurant-prev__status span {
   margin-right: 30px;
@@ -348,6 +464,30 @@ footer a:hover {
 }
 .restaurant-prev__info i {
   margin-right: 10px;
+}
+.restaurant-prev__like {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.restaurant-prev__like .far {
+  opacity: 1;
+}
+.restaurant-prev__like .fas {
+  opacity: 0;
+  background: linear-gradient(30deg, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.restaurant-prev__like .fas:hover {
+  transition: opacity 0.2s ease-in;
+  opacity: 1;
+  transform: scale(1.14);
+  cursor: pointer;
+}
+.restaurant-prev__like > i {
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */
