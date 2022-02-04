@@ -43,7 +43,7 @@
     top: 0;
     right: 0;
     background-color: red;
-    border-radius: 0 4px 0 32px;
+
   }
   
   .validate {
@@ -91,13 +91,15 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: nowrap;
+            & > span{
+                margin-right: 0;
+            }
         }
         .hide {
             background-color: #99e2d0;
             height: 100%;
             width: 9rem;
             padding-right: 9px;
-            border-radius: 0;
             margin-right: -10.5rem;
             align-items: center;
             transition: all 0.3s ease-out;
@@ -111,6 +113,7 @@
             opacity: 0;
           }
         &:hover {
+            cursor: pointer;
             .hide {
                 margin-right: -12px;
             }
@@ -119,6 +122,7 @@
             }
             .menu-section__card__sub{
                 & > span{
+                    transition: all 0.3s ease-out;
                     margin-right: 9rem;
                 }
             }

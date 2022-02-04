@@ -85,7 +85,7 @@ header {
 footer {
   background: #353535;
   color: #fff;
-  padding: 0 0 1.5rem 1rem;
+  padding: 0 0 3rem 1rem;
 }
 footer > h2 {
   margin-bottom: 1.5rem;
@@ -168,7 +168,6 @@ footer a:hover {
   top: 0;
   right: 0;
   background-color: red;
-  border-radius: 0 4px 0 32px;
 }
 
 .validate {
@@ -245,12 +244,14 @@ footer a:hover {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+.menu-section__card__sub > span {
+  margin-right: 0;
+}
 .menu-section__card .hide {
   background-color: #99e2d0;
   height: 100%;
   width: 9rem;
   padding-right: 9px;
-  border-radius: 0;
   margin-right: -10.5rem;
   align-items: center;
   transition: all 0.3s ease-out;
@@ -261,6 +262,9 @@ footer a:hover {
   margin-top: 9px;
   opacity: 0;
 }
+.menu-section__card:hover {
+  cursor: pointer;
+}
 .menu-section__card:hover .hide {
   margin-right: -12px;
 }
@@ -268,6 +272,7 @@ footer a:hover {
   opacity: 1;
 }
 .menu-section__card:hover .menu-section__card__sub > span {
+  transition: all 0.3s ease-out;
   margin-right: 9rem;
 }
 

@@ -1,7 +1,7 @@
 footer{
     background: $colour-footer;
     color: $colour-white;
-    padding:0 0 $grid-gutter 1rem;
+    padding:0 0 0.5*$layout-margin 1rem;
     & > h2{
         margin-bottom: $grid-gutter;
         padding-top: $grid-gutter;
