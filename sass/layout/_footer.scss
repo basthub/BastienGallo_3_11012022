@@ -6,6 +6,9 @@ footer{
         margin-bottom: $grid-gutter;
         padding-top: $grid-gutter;
     }
+    li{
+        margin-bottom: 0.5rem;
+    }
     & i{
         margin-right: 1rem;
     }

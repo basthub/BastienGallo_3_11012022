@@ -15,7 +15,6 @@
     align-items: center;
     width: 100%;
     background-color: $colour-background;
-
 }
 .menu-title{
     display: flex;
@@ -32,25 +31,30 @@
         @include like;
     }
 }
-.hide {
+/*.hide {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 32px;
-    height: 32px;
     overflow: hidden;
     top: 0;
     right: 0;
-    background-color: red;
-
+    background-color: $colour-tertiary;
+    height: 100%;
+    width: 9rem;
+    padding-right: 9px;
+    margin-right: -10.5rem;
+    transition: all 0.3s ease-out;
   }
   
   .validate {
-    margin-top: -4px;
-    color: white;
-    font-family: courier, sans;
-  }
+    
+    color: $colour-white;
+    transform: skew(-6deg);
+            margin-left: -2px;
+            margin-top: 9px;
+            opacity: 0;
+  }*/
 .menu-section{
     width: 90%;
     &__title{
@@ -83,8 +87,7 @@
             margin: 0 $grid-gutter 0.5*$grid-gutter $grid-gutter;
         }
         & > p{
-            overflow: hidden;
-            text-overflow: ellipsis;
+            
         }
         &__sub{
             margin: 0 2*$grid-gutter 0 $grid-gutter;
@@ -93,43 +96,59 @@
             flex-wrap: nowrap;
             & > span{
                 margin-right: 0;
+                transition: all 0.3s ease-out;
+                padding-left: $grid-gutter;
+            }
+            & > p{
+                overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             }
         }
-        .hide {
-            background-color: #99e2d0;
+        &--hide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            background-color: $colour-tertiary;
             height: 100%;
             width: 9rem;
             padding-right: 9px;
             margin-right: -10.5rem;
-            align-items: center;
             transition: all 0.3s ease-out;
-        
-          }
+        }
           
-          .validate {
+        &--validate {
+            color: $colour-white;
             transform: skew(-6deg);
             margin-left: -2px;
             margin-top: 9px;
-            opacity: 0;
-          }
+            opacity: 0;     
+        }
+        
         &:hover {
             cursor: pointer;
-            .hide {
+            .menu-section__card--hide {
                 margin-right: -12px;
             }
-            .validate {
+            .menu-section__card--validate {
                 opacity: 1;
             }
-            .menu-section__card__sub{
-                & > span{
-                    transition: all 0.3s ease-out;
+            span{
                     margin-right: 9rem;
-                }
             }
-        }  
-        
-        
+            .fa-check-circle{
+                transform: rotate(360deg);
+            }    
+            
+        }      
     }
+}
+.fa-check-circle{
+    transition: transform 0.4s ease-in-out;
 }
 
 .command__btn{

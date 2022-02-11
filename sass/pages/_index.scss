@@ -1,3 +1,26 @@
+.loader{
+    position:fixed;
+    display: block;
+    z-index: 1;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right:0;
+    width: 8rem;
+    height: 8rem;
+    margin: auto;
+    @include loading-spinner;
+    &:before{
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $colour-background;
+    }
+}
 .location{
     display: flex;
     flex-direction: row;
@@ -55,7 +78,7 @@
     padding: 3rem;
     margin: $grid-gutter 0 $grid-gutter 0;
     @include shadow;
-    transition: transform .45s ease, background .45s ease;
+    transition: transform .45s ease, background .45s ease-in-out;
     & i{
         color: $colour-icon;
     }
@@ -96,52 +119,56 @@
         flex-direction: column;
         align-items: center;
         justify-content:center;
-        width: 100%;  
-        & > a{
-            width: 93%;
-            background: transparent;
-            margin-bottom: $grid-gutter;
-            border-radius: 4rem;
-        }
+        width: 100%;             
+        
+}
+.restaurant-card{
+    position: relative;
+    width: 93%;
+    background: transparent;
+    margin-bottom: $grid-gutter;
+    border-radius: 4rem;
 }
 .restaurant-prev{
-    /*background: url("../img/la_palette_du_gout.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
     width: 100%;
     position: relative;
     min-width: 30rem;
     min-height: 35rem;
     border-radius: 2rem 2rem 3rem 3rem;
+    transition: background .45s ease-in-out;
     @include shadow;
     &:hover{
         background:$colour-lightprimary;
-    }
-    &__status{
-        display: flex;
-        justify-content: flex-end;
-        padding-top: 15px;
-        position: relative;
-        bottom: 27rem;       
-        & span {
-            margin-right: 30px;
-            color: darken($colour-tertiary, 35%);
-            background-color: $colour-tertiary;
-            font-weight: 700;
-            padding: 1rem 2rem 1rem 2rem;
-            border-radius: 0.5rem;   
+        & img{
+            transform: scale(1.1);
+            
         }
     }
-/*    &__img{
-        border-radius: 2rem
-    }*/
+    &__status{
+        padding-top: 15px;
+        position: absolute;
+        top: 1rem;
+        right: 3rem;       
+        color: darken($colour-tertiary, 35%);
+        background-color: $colour-tertiary;
+        font-weight: 700;
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 0.5rem;           
+    }
+    &__img{
+        overflow: hidden;
+        border-radius: 2rem 2rem 0 0;
+    }
+
     & img{
         object-fit: cover;
         min-height: 0;
         width: 100%;
-        border-radius: 2rem 2em 0 0;
+        
         height:27rem;
+        transition: transform .5s ease-in-out;
+        transform: scale(1.2);
+        
     }
     &__info{
         background-color: transparent;
@@ -161,10 +188,5 @@
     }
     &__like{
         @include like;
-    } /*
-    border-radius: 2rem;
-    height: 35rem;
-
-    @include shadow;*/
-
-}
+    }
+}    

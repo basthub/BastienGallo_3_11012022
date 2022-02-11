@@ -22,9 +22,14 @@ i{
         font-size: 2.5rem;
     }
 }
-.footer__logo{
+.footer{
+    &__logo{
     font-family: 'Shrikhand', cursive;
-    font-size: 2rem;        
+    font-size: 2rem;
+    }
+    & > i{
+        font-size: 2rem;
+    }        
 }
 
 .menu-section{
