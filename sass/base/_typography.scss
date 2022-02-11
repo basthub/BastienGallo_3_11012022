@@ -1,7 +1,54 @@
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
 }
 
 h1{
-    font-family: 'Shrikland', sans-serif;
+    font-family: 'Shrikhand', cursive;
+    font-size: 4rem;
+}    
+
+.logo{
+    font-family: 'Shrikhand', cursive;
+}
+i{
+    font-size: 2.5rem;
+
+}
+.menu-title{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+    & i{
+        font-size: 2.5rem;
+    }
+}
+.footer{
+    &__logo{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2rem;
+    }
+    & > i{
+        font-size: 2rem;
+    }        
+}
+.menu-section{
+    &__title{
+        font-weight: 400;
+    }
+    &__card__sub > span{
+    font-weight: 700;
+    }
+}
+.restaurant-prev{
+    &__status{
+        @include desktop{
+            font-size: 1.5rem;
+        }
+    }
+/*    &__info{
+        @include desktop{
+            font-size: 1.5rem;
+        }
+    }*/
 }

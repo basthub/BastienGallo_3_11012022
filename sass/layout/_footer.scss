@@ -1,0 +1,21 @@
+footer{
+    background: $colour-footer;
+    color: $colour-white;
+    padding:0 0 0.5*$layout-margin 1rem;
+    & > h2{
+        margin-bottom: $grid-gutter;
+        padding-top: $grid-gutter;
+    }
+    li{
+        margin-bottom: 0.5rem;
+    }
+    & i{
+        margin-right: 1rem;
+    }
+    & a{
+        color: $colour-white;
+        &:hover{
+            color:$colour-tertiary;
+        }
+    }
+}

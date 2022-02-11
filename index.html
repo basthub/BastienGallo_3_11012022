@@ -4,56 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c3001d794c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Shrikhand&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <title>ohmyfood</title>
 </head>
 <body>
+    <div class="loader">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
     <header>
         <h1>ohmyfood</h1>
-        <p>Paris, Belleville</p>
-        <h2>Réserver le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a href="#" >Explorer nos restaurants</a>
     </header>
-    <div>
-        <h2>Fonctionnement</h3>
-        <ul>
-            <li>Choisissez un restaurant</li>
-            <li>Composez votre menu</li>
-            <li>Dégustez au restaurant</li>
-        </ul>
-    </div>
-    <div>
-        <h2>Restaurants</h3>
-        <div>
-            <p>nouveau</p>
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
-        </div>
-        <div>
-            <p>nouveau</p>
-            <h3>La note enchantée</h3>
-            <p>Charonne</p>
-        </div>
-        <div>
-            <h3>À la française</h3>
-            <p>Cité Rouge</p>
-        </div>
-        <div>
-            <h3>Le délice des sens</h3>
-            <p>Folie-Méricourt</p>
-        </div>
-    </div>
+    <main class="container">
+        <section class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Paris, Belleville</p>
+        </section>
+        <section class="heading">
+            <div class="heading-wrapper">
+                <h2 class="heading__title">Réserver le menu qui vous convient</h2>
+                <p class="heading__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            </div>
+            <a class="heading__btn" href="#restaurant">Explorer nos restaurants</a>
+        </section>
+        <aside class="functioning">
+            <h2>Fonctionnement</h2>
+            <ul>
+                <li class="step">
+                    <p class="step__number">1</p>
+                    <i class="fas fa-mobile-alt fa-fw"></i>
+                    <p class="step__txt">Choisissez un restaurant</p>
+                </li>
+                <li class="step">
+                    <p class="step__number">2</p> 
+                    <i class="fas fa-list fa-fw"></i>
+                    <p class="step__txt">Composez votre menu</p>
+                </li>
+                <li class="step">
+                    <p class="step__number">3</p> 
+                    <i class="fas fa-store fa-fw"></i>
+                    <p class="step__txt">Dégustez au restaurant</p>
+                </li>
+            </ul>
+        </aside>
+        <section class="restaurant" id="restaurant">
+            <h2>Restaurants</h2>
+            <div class="restaurant-wrapper">
+                <div class="restaurant-card">
+                    <a href="la_palette_du_gout.html">
+                        <div class="restaurant-prev">
+                            <div class="restaurant-prev__img">
+                                <img src="public/img/la_palette_du_gout.jpg" alt="plat servi au restaurant La palette du gout">
+                            </div>
+                            <span class="restaurant-prev__status">Nouveau</span>
+                            <div class="restaurant-prev__info">
+                                <div class="restaurant-prev__info__text">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="restaurant-prev__like"><i class="far fa-heart"></i><i class="fas fa-heart"></i></a>
+                </div>
+                <div class="restaurant-card">
+                    <a href="la_note_enchantee.html">
+                        <div class="restaurant-prev">
+                            <div class="restaurant-prev__img">
+                                <img src="public/img/la_note_enchantee.jpg" alt="plat servi au restaurant La note enchantée">
+                            </div>
+                            <span class="restaurant-prev__status">Nouveau</span>
+                            <div class="restaurant-prev__info">
+                                <div class="restaurant-prev__info__text">
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <a class="restaurant-prev__like"><i class="far fa-heart"></i><i class="fas fa-heart"></i></a>
+                </div> 
+                <div class="restaurant-card">
+                    <a href="a_la_francaise.html">
+                        <div class="restaurant-prev">
+                            <div class="restaurant-prev__img">
+                                <img src="public/img/a_la_francaise.jpg" alt="plat servi au restaurant À la française">
+                            </div>
+                            <div class="restaurant-prev__info">
+                                <div class="restaurant-prev__info__text">
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>   
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="restaurant-prev__like"><i class="far fa-heart"></i><i class="fas fa-heart"></i></a>
+                </div> 
+                <div class="restaurant-card">
+                    <a href="le_delice_des_sens.html">
+                        <div class="restaurant-prev">
+                            <div class="restaurant-prev__img">
+                                <img src="public/img/le_delice_des_sens.jpg" alt="plat servi au restaurant Le délice des sens">
+                            </div>
+                            <div class="restaurant-prev__info">
+                                <div class="restaurant-prev__info__text">
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>     
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="restaurant-prev__like"><i class="far fa-heart"></i><i class="fas fa-heart"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>  
     <footer>
-        <h2>ohmyfood</h2>
+        <h2 class=footer__logo>ohmyfood</h2>
         <ul>
-            <li>Proposer un restaurant</li>
-            <li>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+            <li><a href="#"><i class="fas fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </footer>
-    
 </body>
 </html>
