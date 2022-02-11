@@ -10,3 +10,8 @@ $colour-white: #fff;
 
 $layout-margin: 6rem;
 $grid-gutter: $layout-margin * .25;
+
+$breakpoints: (
+    tablet : 768px,
+    desktop: 992px
+);

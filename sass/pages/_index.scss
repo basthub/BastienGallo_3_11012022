@@ -21,6 +21,16 @@
         background: $colour-background;
     }
 }
+.container{
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        & > aside{
+            order: 4;
+        }
+    }
+}
 .location{
     display: flex;
     flex-direction: row;
@@ -34,6 +44,9 @@
     & p{
         margin: $grid-gutter 0 $grid-gutter 0;
     }
+    @include desktop{
+        width: 100%;
+    }
 }
 .heading{
     background: $colour-background;
@@ -41,32 +54,67 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: $layout-margin;
+        width: 100%;
+    }
     &__title{
         font-weight: 700;
-        width: 80%;
+        width: 100%;
         text-align: center;
         margin-top: $layout-margin;
+        max-width: 45rem;
     }
     &__subtitle{
         margin-top: $grid-gutter;
         font-weight: 100;
         text-align: center;
-        width:80%;
+        width:100%;
+        max-width: 45rem;
     }
     &__btn{
         @include btn;
         margin: $grid-gutter 0 $layout-margin 0;
+        @include tablet {
+            margin-top: $layout-margin;
+        }
+        @include desktop{
+            position: relative;
+            top: 3rem;
+        }
         
     }
 }
 .functioning{
-    margin:  $layout-margin 0 $layout-margin $grid-gutter;
-    width: 92%;
-    & ul{
-        margin-left: 0.8rem;
+    padding:  $layout-margin 0 $layout-margin $grid-gutter;
+    width: 90%;
+    @include desktop{
+        width: 35%;
+    }
+    & > ul{
+        margin-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: map-get($breakpoints, tablet);
+        @include tablet{
+            margin: auto;
+        }
+    }
+    & > h2{
+        margin-left: $grid-gutter;
+        @include tablet{
+            margin: $grid-gutter $layout-margin;
+
+        }
     }
 }
 .step{
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -76,7 +124,7 @@
     font-weight: 400;
     border-radius: 2rem;
     padding: 3rem;
-    margin: $grid-gutter 0 $grid-gutter 0;
+    margin: $grid-gutter 0;
     @include shadow;
     transition: transform .45s ease, background .45s ease-in-out;
     & i{
@@ -102,15 +150,24 @@
             color:$colour-primary;
         }
     }
+    @include tablet{
+        width: 80%;
+    }
 }
 .restaurant{
     background: $colour-background;
-    padding: $layout-margin 0 $layout-margin 0;
+    padding: $layout-margin 0;
 
     & > h2{
         margin: 0 0 $grid-gutter $grid-gutter;
     }
-    
+    @include desktop{
+        background: transparent;
+        width: 65%;
+        & > h2{
+            margin: $grid-gutter $layout-margin;
+        }
+    }
     
 }
 .restaurant-wrapper{
@@ -119,7 +176,13 @@
         flex-direction: column;
         align-items: center;
         justify-content:center;
-        width: 100%;             
+        width: 100%;
+        @include tablet{
+            flex-direction: row;
+        }   
+        @include desktop{
+            flex-direction: row;
+        }          
         
 }
 .restaurant-card{
@@ -128,6 +191,16 @@
     background: transparent;
     margin-bottom: $grid-gutter;
     border-radius: 4rem;
+    @include tablet{
+        width: 45%;
+        margin: $grid-gutter;
+    }
+    @include desktop{
+        
+        background:$colour-background;
+        
+        border-radius: 2rem;
+    }
 }
 .restaurant-prev{
     width: 100%;
@@ -141,8 +214,12 @@
         background:$colour-lightprimary;
         & img{
             transform: scale(1.1);
-            
         }
+    }
+    @include desktop{
+        min-width: 0;
+        min-height: 0;
+        height: 27rem;
     }
     &__status{
         padding-top: 15px;
@@ -153,7 +230,10 @@
         background-color: $colour-tertiary;
         font-weight: 700;
         padding: 1rem 2rem 1rem 2rem;
-        border-radius: 0.5rem;           
+        border-radius: 0.5rem;
+        @include desktop{
+            padding: 0.5rem 1rem 0.5rem 1rem;
+        }           
     }
     &__img{
         overflow: hidden;
@@ -164,10 +244,12 @@
         object-fit: cover;
         min-height: 0;
         width: 100%;
-        
         height:27rem;
         transition: transform .5s ease-in-out;
         transform: scale(1.2);
+        @include desktop{
+            height: 20rem;
+        }
         
     }
     &__info{
@@ -184,9 +266,15 @@
         & i{
             margin-right: 10px;
         }
-        
+        @include desktop{
+            top: 21rem;
+        }
     }
     &__like{
         @include like;
+        @include desktop{
+            bottom: 2rem;
+
+        }
     }
 }    

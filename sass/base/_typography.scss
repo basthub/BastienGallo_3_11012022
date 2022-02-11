@@ -14,6 +14,7 @@ h1{
 }
 i{
     font-size: 2.5rem;
+
 }
 .menu-title{
     font-family: 'Shrikhand', cursive;
@@ -31,7 +32,6 @@ i{
         font-size: 2rem;
     }        
 }
-
 .menu-section{
     &__title{
         font-weight: 400;
@@ -39,4 +39,16 @@ i{
     &__card__sub > span{
     font-weight: 700;
     }
+}
+.restaurant-prev{
+    &__status{
+        @include desktop{
+            font-size: 1.5rem;
+        }
+    }
+/*    &__info{
+        @include desktop{
+            font-size: 1.5rem;
+        }
+    }*/
 }

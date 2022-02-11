@@ -5,9 +5,17 @@ header{
     flex-wrap: wrap;
     width: 100%;
     margin : 0.5rem 0;
+    position: relative;
 }
 .to-index{
     position: absolute;
     top: 2.3rem;
     left: 5rem;
+    transition: transform 10ms ease;
+    &:hover{
+            transform: scale(1.2);
+            & i{
+                color:$colour-tertiary;
+            }
+    }
 }

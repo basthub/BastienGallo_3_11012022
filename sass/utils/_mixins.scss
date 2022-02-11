@@ -1,3 +1,15 @@
+/*Format Tablette*/
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoints, tablet)){
+      @content;
+  }
+}
+/*Format Desktop*/
+@mixin desktop{
+  @media screen and (min-width: map-get($breakpoints, desktop)){
+      @content;
+}
+}
 /*Bouton*/
 @mixin btn{
     background: linear-gradient(175deg, $colour-secondary, $colour-primary);
