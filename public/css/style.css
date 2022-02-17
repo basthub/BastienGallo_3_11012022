@@ -277,35 +277,8 @@ footer a:hover {
   position: absolute;
 }
 
-/*.hide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    background-color: $colour-tertiary;
-    height: 100%;
-    width: 9rem;
-    padding-right: 9px;
-    margin-right: -10.5rem;
-    transition: all 0.3s ease-out;
-  }
-
-  .validate {
-
-    color: $colour-white;
-    transform: skew(-6deg);
-            margin-left: -2px;
-            margin-top: 9px;
-            opacity: 0;
-  }*/
 .menu-section {
   width: 90%;
-  /*    &__wrapper{
-
-      }*/
 }
 .menu-section__title--underline {
   background-color: #99e2d0;
