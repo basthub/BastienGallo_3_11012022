@@ -1,7 +1,3 @@
-main{
-    max-width: 992px;
-    margin: auto;
-}
 .menu-heading{
     width: 100%;
     height: 30rem;
@@ -32,6 +28,9 @@ main{
     padding: 2*$grid-gutter 2*$grid-gutter;
     background-color: $colour-background;
     &__like{
+        position: absolute;
+        right: 3rem;
+        bottom: 4rem;
         @include like;
     }
 }

@@ -36,13 +36,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
+    position: relative;
     background-color: $colour-location;
     & i{
-        margin-right:1rem; 
+        position: relative;
+        right: 2rem;
+        bottom: 2px;
+        
     }
-    & p{
+    & h3{
         margin: $grid-gutter 0 $grid-gutter 0;
+        font-weight: 400;
     }
     @include desktop{
         width: 100%;
@@ -64,11 +68,12 @@
         font-weight: 700;
         width: 100%;
         text-align: center;
-        margin-top: $layout-margin;
+        padding: $layout-margin 0.6*$layout-margin 0 0.6*$layout-margin;
         max-width: 45rem;
     }
     &__subtitle{
         margin-top: $grid-gutter;
+        padding: 0 0.5*$grid-gutter;
         font-weight: 100;
         text-align: center;
         width:100%;
@@ -76,7 +81,7 @@
     }
     &__btn{
         @include btn;
-        margin: $grid-gutter 0 $layout-margin 0;
+        margin: 2*$grid-gutter 0 $layout-margin 0;
         @include tablet {
             margin-top: $layout-margin;
         }
@@ -106,29 +111,27 @@
         }
     }
     & > h2{
-        margin-left: $grid-gutter;
-        @include tablet{
-            margin: $grid-gutter $layout-margin;
-
-        }
+        margin: 2*$grid-gutter $grid-gutter;
     }
 }
 .step{
     width: 100%;
+    max-width: 54rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     background: $colour-background;
-    font-weight: 400;
     border-radius: 2rem;
-    padding: 3rem;
+    padding: 3rem 2rem;
     margin: $grid-gutter 0;
     @include shadow;
     transition: transform .45s ease, background .45s ease-in-out;
     & i{
         color: $colour-icon;
+        position: relative;
+        right: 1rem;
     }
     &__number{
         background: $colour-primary;
@@ -137,11 +140,15 @@
         font-size: 1.5rem;
         padding: 0.5rem 1rem 0.5rem 1rem;
         position: relative;
-        right: 4.5rem;
+        right: 3.5rem;
     }
     &__txt{
         margin: 0 $grid-gutter 0 $grid-gutter;
         width: 30rem;
+        min-width: 223px;
+        @include desktop{
+            min-width: 0;
+        }
     }
     &:hover{
         background:$colour-lightprimary;
@@ -150,8 +157,8 @@
             color:$colour-primary;
         }
     }
-    @include tablet{
-        width: 80%;
+    @include desktop{
+        width: 90%;
     }
 }
 .restaurant{
@@ -189,7 +196,7 @@
     position: relative;
     width: 93%;
     background: transparent;
-    margin-bottom: $grid-gutter;
+    margin-bottom: 2*$grid-gutter;
     border-radius: 4rem;
     @include tablet{
         width: 45%;
@@ -206,8 +213,8 @@
     width: 100%;
     position: relative;
     min-width: 30rem;
-    min-height: 35rem;
-    border-radius: 2rem 2rem 3rem 3rem;
+    min-height: 29rem;
+    border-radius: 2rem;
     transition: background .45s ease-in-out;
     @include shadow;
     &:hover{
@@ -224,12 +231,12 @@
     &__status{
         padding-top: 15px;
         position: absolute;
-        top: 1rem;
-        right: 3rem;       
+        top: 1.5rem;
+        right: 1.5rem;       
         color: darken($colour-tertiary, 35%);
         background-color: $colour-tertiary;
         font-weight: 700;
-        padding: 1rem 2rem 1rem 2rem;
+        padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         @include desktop{
             padding: 0.5rem 1rem 0.5rem 1rem;
@@ -244,7 +251,7 @@
         object-fit: cover;
         min-height: 0;
         width: 100%;
-        height:27rem;
+        height:20rem;
         transition: transform .5s ease-in-out;
         transform: scale(1.2);
         @include desktop{
@@ -257,7 +264,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 1.5rem;
         position: absolute;
         right: 0;
         left: 0;
@@ -271,10 +278,12 @@
         }
     }
     &__like{
+        position: absolute;
+        right: 3rem;
+        bottom: 3rem;
         @include like;
         @include desktop{
             bottom: 2rem;
-
         }
     }
 }    
