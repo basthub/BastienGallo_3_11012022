@@ -72,6 +72,7 @@
       opacity: 0;
       background:linear-gradient(30deg, $colour-secondary, $colour-primary);
       background-clip: text;
+      -webkit-background-clip:text;
       color:transparent;
       position: absolute;
       left: 0.25px;
