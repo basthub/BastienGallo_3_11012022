@@ -146,6 +146,7 @@ footer i {
   opacity: 0;
   background: linear-gradient(30deg, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   position: absolute;
   left: 0.25px;
@@ -261,6 +262,7 @@ footer a:hover {
   opacity: 0;
   background: linear-gradient(30deg, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   position: absolute;
   left: 0.25px;
@@ -818,6 +820,7 @@ footer a:hover {
   opacity: 0;
   background: linear-gradient(30deg, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   position: absolute;
   left: 0.25px;
